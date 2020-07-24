@@ -18,7 +18,10 @@ const configureStore = () => {
 
     sagaMiddleware.run(rootSaga);
 
-    store.dispatch({ type: 'HELLO' }); // this is to test the sagas work
+    // store.dispatch({ type: 'HELLO' }); // this is to test the sagas work
+    store.dispatch({ type: 'LOGOUT' });
+    store.dispatch({ type: 'LOGIN' });
+    store.dispatch({ type: 'LOGOUT' });
 
     return store;
 };
